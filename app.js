@@ -20,7 +20,17 @@ function agregarAmigo(){
 }
 
 function sortearAmigo(){
-    actualizaLista();
+    if(amigos.length>0)
+        {
+            let amigoSecreto=Math.floor(Math.random()*amigos.length);
+            let result= document.getElementById('resultado');
+            result.innerHTML="";
+            result.innerHTML=amigos[amigoSecreto];
+
+        }
+    else{
+        alert("Por favor, inserte un nombre.");
+    }
 }
 function muestraListaAmigos(){
     let lista =document.getElementById('listaAmigos');
